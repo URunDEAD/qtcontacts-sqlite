@@ -67,6 +67,7 @@ public:
         m_numCards++;
         if (m_numCards % 20 == 0) { // save every 20 vcards
             importVCards();
+            m_vcards.clear();
         }
     }
 
