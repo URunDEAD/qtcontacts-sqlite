@@ -3930,6 +3930,10 @@ QContactManager::Error ContactWriter::updateOrCreateAggregate(QContact *contact,
             " SELECT secondId FROM Relationships WHERE firstId = :contactId AND type = 'IsNot'"
             " UNION"
             " SELECT firstId FROM Relationships WHERE secondId = :contactId AND type = 'IsNot'"
+            " UNION"
+            " SELECT firstId FROM Relationships WHERE secondId IN ("
+                " SELECT contactId FROM Contacts WHERE collectionId = :collectionId"
+            " ) AND type = 'Aggregates'"
         " )"));
 
     // Use a simple match algorithm, looking for exact matches on name fields,
@@ -3943,6 +3947,7 @@ QContactManager::Error ContactWriter::updateOrCreateAggregate(QContact *contact,
     QMap<QString, QVariant> bindings;
     bindings.insert(":lastName", lastName);
     bindings.insert(":contactId", ContactId::databaseId(*contact));
+    bindings.insert(":collectionId", ContactCollectionId::databaseId(contact->collectionId()));
     bindings.insert(":excludeGender", excludeGender);
     if (!m_database.createTemporaryContactIdsTable(possibleAggregatesTable,
                                                    QString(), where, orderBy, bindings)) {
