@@ -3356,7 +3356,8 @@ void tst_Aggregation::batchSemantics()
     int newContactsCount = allContacts.size() - allContactsCount;
     QCOMPARE(newContactsCount, 6); // 3 local, 3 aggregate
 
-    // Now we test the semantic of "two contacts from the same collection should get aggregated if they match"
+    // Now we test the semantic of "two contacts from the same collection
+    // should not get aggregated even if they match"
     QContact d, e;
     d.setCollectionId(trialAddressbook.id());
     e.setCollectionId(trialAddressbook.id());
@@ -3376,7 +3377,8 @@ void tst_Aggregation::batchSemantics()
 
     allContacts = m_cm->contacts(allCollections);
     newContactsCount = allContacts.size() - allContactsCount;
-    QCOMPARE(newContactsCount, 9); // 5 local, 4 aggregate - d and e should have been aggregated into one.
+    QCOMPARE(newContactsCount, 10); // 5 local, 5 aggregate - d and e should not
+                                    // have been aggregated into one.
 }
 
 void tst_Aggregation::customSemantics()
