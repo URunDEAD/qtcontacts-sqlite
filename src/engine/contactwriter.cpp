@@ -3696,7 +3696,7 @@ static QContactManager::Error enforceDetailConstraints(QContact *contact)
             if (!detailUri.isEmpty()) {
                 if (detailUris.contains(detailUri)) {
                     // This URI conflicts with one already present in the contact
-                    QTCONTACTS_SQLITE_WARNING(QString::fromLatin1("Detail URI confict on: %1 %2 %3").arg(detailUri).arg(detailTypeName(det)).arg(det.type()));
+                    QTCONTACTS_SQLITE_WARNING(QString::fromLatin1("Detail URI conflict on: %1 %2 %3").arg(detailUri).arg(detailTypeName(det)).arg(det.type()));
                     return QContactManager::InvalidDetailError;
                 }
 
