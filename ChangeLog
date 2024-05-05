@@ -1,0 +1,2544 @@
+2024-05-05 Mike Gabriel
+
+        * Release 0.3.5 (HEAD -> main, tag: 0.3.5)
+
+2022-10-18 ArubIslander
+
+        * Iterate through all subfolders to import contacts (64549ba)
+
+2022-10-20 Florian Leeber
+
+        * Delete .building (unknown purpose) (2d0cf7c)
+
+2022-09-03 Alberto Mardegan
+
+        * debian: update changelog (13c7c60)
+        * tests: update aggregation test for contacts in the same collection
+          (0ab9c5e)
+
+2022-09-02 Alberto Mardegan
+
+        * ContactWriter: prevent aggregation within the same collection
+          (e6d1a42)
+          Fixes:
+          https://gitlab.com/ubports/development/core/qtcontacts-sqlite/-/issues/2
+
+2022-03-26 Alberto Mardegan
+
+        * migration: clear vcard array after import (2cfe28a)
+        * CI: move Jenkinsfile to debian/ (eb17395)
+
+2021-10-14 Alberto Mardegan
+
+        * debian: load the ICU extension (d8b1b0b)
+        * engine: add a config option to load the ICU extension (d22a5a6)
+
+2021-10-12 Alberto Mardegan
+
+        * ContactReader: support case insensitive search (bd8936d)
+
+2021-05-27 Alberto Mardegan
+
+        * [ubports] Workaround for QSQLite memory corruption (965ab68)
+
+2021-05-20 Alberto Mardegan
+
+        * CI: use new UBports Jenkinsfile (65df00f)
+        * contactwriter: make SQL query compatible with Qt 5.12 (7215909)
+
+2021-05-18 Alberto Mardegan
+
+        * debian: rebuild for Qt 5.12 (835e4cf)
+
+2020-10-17 Alberto Mardegan
+
+        * debian/changelog: update to 0.3.4 (aed58ff)
+
+2020-02-09 Alberto Mardegan
+
+        * debian: add migration script (ed1f4e7)
+
+2020-02-03 Alberto Mardegan
+
+        * UBports: add importer tool from EDS (294b7c7)
+
+2020-10-16 Alberto Mardegan
+
+        * debian: remove the extra test file in all architectures (d750d5a)
+        * tests: prepare a temporary directory for the database (0a5627d)
+
+2019-05-10 Alberto Mardegan
+
+        * debian: fix tests in Jenkins (f8d8418)
+        * debian: Don't run tests in parallel (c905923)
+        * debian: add dependencies for running tests (8322bf2)
+
+2019-04-25 Alberto Mardegan
+
+        * Add .gitignore to debian directory (b119881)
+
+2020-10-15 Alberto Mardegan
+
+        * debian: fix build with latest crossbuilder (b72ba9d)
+        * debian: remove test file from installation (a285c0f)
+        * Merge branch 'master' into xenial (d6d38e5)
+
+2020-10-06 Chris Adams
+
+        * Bump version (6e7e4da)
+
+2020-10-06 chriadam
+
+        * Merge branch 'jb51416' into 'master' (aff7537)
+
+2020-10-06 Chris Adams
+
+        * [qtcontacts-sqlite] Avoid QVariant comparison during destruction.
+          Contributes to JB#51416 (829d3c7)
+        * Bump version (73ae220)
+
+2020-10-06 chriadam
+
+        * Merge branch 'jb50555' into 'master' (f357a68)
+
+2020-10-02 Chris Adams
+
+        * [qtcontacts-sqlite] Update the testrunner definition. Contributes
+          to JB#50555 (5636c53)
+        * [qtcontacts-sqlite] Tests require lastName display label group.
+          Contributes to JB#50555 (e4a54c0)
+
+2020-09-29 Chris Adams
+
+        * Bump version (016c788)
+
+2020-09-29 chriadam
+
+        * Merge branch 'jb50551' into 'master' (c88d705)
+
+2020-09-28 Chris Adams
+
+        * [qtcontacts-sqlite] Remove constituent-less aggregates. Contributes
+          to JB#50551 (ebe3b10)
+
+2020-09-25 Chris Adams
+
+        * Bump version to avoid tag collision (1433a65)
+
+2020-09-25 chriadam
+
+        * Merge branch 'qtpimupgrade' into 'master' (92edb86)
+
+2020-08-27 Chris Adams
+
+        * Bump version of package and pkgconfig (2e30ae4)
+
+2020-09-18 Chris Adams
+
+        * Performance: build with lto and dead code elimination (97d831e)
+
+2020-09-17 Chris Adams
+
+        * Performance: use QStringLiteral wherever possible to avoid QString
+          constructions (a1c569f)
+        * Performance: reduce unnecessary mutex locks (ed35e43)
+
+2020-09-10 Chris Adams
+
+        * Performance: improve performance of reads (12ce0ce)
+
+2020-09-09 Chris Adams
+
+        * Performance: add DetailsContactIdIndex and remove other indexes
+          (ca3a91a)
+        * Performance: cache some more queries (0300c7f)
+        * Performance: improve write time by omitting unnecessary
+          regenerateAggregate (8d25513)
+        * Performance: add some more benchmarks (a6d7253)
+
+2020-09-11 Bea Lam
+
+        * Don't use custom qtcontacts-sqlite extension values that already
+          exist in latest QtPim (f3e3b3d)
+
+2020-09-09 Bea Lam
+
+        * Add COLLECTION_EXTENDEDMETADATA_KEY_READONLY to extension (38e3d97)
+
+2020-08-26 Chris Adams
+
+        * Improve the default conflict resolution code for TWCSA (4d277d7)
+
+2020-08-21 Bea Lam
+
+        * Add aggregateCollectionId() to extension (cc6f435)
+
+2020-08-17 Chris Adams
+
+        * Fix bugs in ID handling and aggregation (8645dc8)
+
+2020-08-14 Chris Adams
+
+        * [qtcontacts-sqlite] Regenerate aggregates on database load if
+          required. Contributes to JB#50551 (eb98ed3)
+
+2020-08-12 Chris Adams
+
+        * [qtcontacts-sqlite-extensions] Reimplement the TWCSA interface.
+          Contributes to JB#50551 (5844edd)
+        * [qtcontacts-sqlite] Add Request classes to provide asynchronous
+          synchronisation API. Contributes to JB#50551 (393e561)
+        * [qtcontacts-sqlite] Support fine-grained change reporting.
+          Contributes to JB#50551 (e44f1ab)
+
+2020-07-01 Chris Adams
+
+        * [qtcontacts-sqlite] Support QContactCollection semantics.
+          Contributes to JB#50551 (72ef2f4)
+
+2020-07-13 Chris Adams
+
+        * Bump version (d274d3b)
+
+2020-07-13 chriadam
+
+        * Merge branch 'jb50214' into 'master' (b0b9c85)
+
+2020-06-29 Chris Adams
+
+        * [qtcontacts-sqlite] Treat '.' as separator rather than DTMF pause.
+          Contributes to JB#50214 (1ef5e07)
+
+2020-06-08 Matti Kosola
+
+        * Merge branch 'jb50027' into 'master' (a8b74d7)
+
+2020-05-29 Matti Kosola
+
+        * [qtcontacts-sqlite] Use macros, not hardcoded paths. JB#50027
+          (cd6037c)
+
+2019-11-14 Andrew den Exter
+
+        * Merge branch 'jb47084' into 'master' (8d56179)
+        * Bump the database version to force regeneration of display labels.
+          (9806c86)
+
+2019-11-01 Andrew den Exter
+
+        * [qtcontacts-sqlite] Add a fallback to company name when
+          synthesizing a display label. Fixes JB#47084 (e744bab)
+
+2019-10-28 Andrew den Exter
+
+        * Merge branch 'jb47219' into 'master' (7fd4ead)
+
+2019-10-23 Chris Adams
+
+        * Add unit test for QContactDetailFetchRequest (0559d3b)
+
+2019-10-03 Andrew den Exter
+
+        * [qtcontacts-sqlite] Add an extension for querying unique details
+          indepenently of a contact. Contributes to JB#47219
+          (22f1ce4)
+
+2019-09-13 Raine Makelainen
+
+        * Merge branch 'jb46650' into 'master' (d807043)
+
+2019-09-12 Chris Adams
+
+        * Fix build: ensure we link/include appropriately mlite5 via
+          pkgconfig (6a6951f)
+        * [qtcontacts-sqlite] Treat "other" display label group specially.
+          Contributes to JB#46650 (713ab01)
+
+2019-07-06 Alberto Mardegan
+
+        * Merge branch 'master' into xenial (e78d03a)
+
+2019-06-26 pvuorela
+
+        * Merge branch 'mer-skip-group-sort-test' into 'master' (274b5f7)
+
+2019-06-15 Alberto Mardegan
+
+        * tests: skip tst_displaylabelgroups() if MLITE is not available
+          (f997865)
+        * Merge branch 'master' into xenial (e218534)
+
+2019-06-14 chriadam
+
+        * Merge branch 'test_wipe_mer' into 'master' (7247050)
+
+2019-05-11 Alberto Mardegan
+
+        * Tests, QContactManager: cleanup self constituent at end of test
+          (831f1da)
+
+2019-05-01 Alberto Mardegan
+
+        * Tests, QContactManager: wipe contacts after each test (e41cf81)
+
+2019-06-01 Alberto Mardegan
+
+        * Merge branch 'master' into xenial (ccf3a90)
+
+2019-05-27 pvuorela
+
+        * Merge branch 'mer-plugin-path' into 'master' (0ae95a4)
+
+2019-05-10 Alberto Mardegan
+
+        * [qtcontacts-sqlite] Allow overriding plugin directory (f4bb107)
+
+2019-05-24 pvuorela
+
+        * Merge branch 'mer-column-index' into 'master' (73633d6)
+        * Merge branch 'mer-includes' into 'master' (8abfda8)
+        * Merge branch 'mer-no-contacts-private' into 'master' (70f85e8)
+
+2019-05-21 Alberto Mardegan
+
+        * [qtcontacts-sqlite] Add missing includes (fd3ce92)
+
+2019-05-10 Alberto Mardegan
+
+        * [qtcontacts-sqlite] Access columns via a mutable index (ead1bf2)
+
+2019-05-17 Chris Adams
+
+        * Bump version (47dc7f4)
+
+2019-05-17 chriadam
+
+        * Merge branch 'jb45836' into 'master' (4aab2f9)
+
+2019-05-16 Chris Adams
+
+        * [qtcontacts-sqlite] Properly emit changes to display label groups.
+          Contributes to JB#45836 (a283882)
+
+2019-05-10 Alberto Mardegan
+
+        * Tests, DisplayLabelGroups: remove contacts-private dependency
+          (390e79e)
+
+2019-05-09 pvuorela
+
+        * Merge branch 'no_qtgui_mer' into 'master' (737cd10)
+        * Merge branch 'overrides_mer' into 'master' (5aee761)
+
+2019-05-09 blam
+
+        * Merge branch 'jb45731-sort-order' into 'master' (b742eb0)
+
+2019-04-30 Alberto Mardegan
+
+        * Tests: don't depend on QtGui (37a333c)
+
+2019-03-13 Alberto Mardegan
+
+        * [qtcontacts-sqlite] Add `override` to virtual methods (2277af4)
+
+2019-05-08 Alberto Mardegan
+
+        * Merge branch 'master' into xenial (1a43d99)
+
+2019-05-08 Bea Lam
+
+        * [contacts] Fix default sort order. Fixes JB#45731 (388a5a1)
+
+2019-05-03 pvuorela
+
+        * Merge branch 'mer-test-dbus-session' into 'master' (1099536)
+
+2019-05-02 pvuorela
+
+        * Merge branch 'mer-undefined-symbols' into 'master' (4ac7b57)
+        * Merge branch 'mer-gitignore' into 'master' (b41063f)
+
+2019-05-01 Alberto Mardegan
+
+        * Tests: launch a temporary D-Bus session (ed11b9e)
+
+2019-04-25 Alberto Mardegan
+
+        * build: Fail build on undefined symbols (052cc65)
+        * Add .gitignore (3b2f02f)
+
+2019-04-30 Chris Adams
+
+        * Bump version (916f2ca)
+
+2019-04-30 chriadam
+
+        * Merge branch 'jb44742-fixes' into 'master' (617ea7b)
+
+2019-04-18 blam
+
+        * Merge branch 'jb44713-empty-subtypes' into 'master' (3959d16)
+
+2019-04-04 Bea Lam
+
+        * [qtcontacts-sqlite] Allow empty sub-type for urls and
+          anniversaries. Contributes to JB#44713 (0ec76a9)
+
+2019-04-16 Chris Adams
+
+        * [qtcontacts-sqlite] Improve DLG plugin interface. Contributes to
+          JB#44742 (367e4b5)
+
+2019-04-16 pvuorela
+
+        * Merge branch 'cleanups' into 'master' (7b785aa)
+
+2019-04-15 Pekka Vuorela
+
+        * [qtcontacts-sqlite] Cleanups. Contributes to JB#38781 (94f925e)
+
+2019-04-15 Chris Adams
+
+        * [contacts] Bump version and .pc version. Contributes to JB#44742
+          (80fa782)
+        * Bump version (5d71e3c)
+
+2019-04-15 chriadam
+
+        * Merge branch 'jb44707-core-apps' into 'master' (3b97cb9)
+
+2019-04-15 Chris Adams
+
+        * Add check for database schema version on database open (e0a0fc6)
+
+2019-03-13 Bea Lam
+
+        * [qtcontacts-sqlite] Use "?" instead of "!" for unknown display
+          label group. Contributes to JB#44742 (c7bcc05)
+
+2019-03-08 Chris Adams
+
+        * [qtcontacts-sqlite] Observe system setting for preferred group
+          property. Contributes to JB#44742 (f7ff0b1)
+
+2019-03-07 Chris Adams
+
+        * [qtcontacts-sqlite] Automatically extend known display label groups
+          at runtime. Contributes to JB#44742 (787f62e)
+
+2019-03-04 Chris Adams
+
+        * [qtcontacts-sqlite] Store display label group sort order to table
+          manually. Contributes to JB#44742 (905f6b7)
+
+2019-02-18 Chris Adams
+
+        * [qtcontacts-sqlite] Load installed display label generator plugins.
+          Contributes to JB#44742 (d1af84a)
+
+2019-02-14 Chris Adams
+
+        * [qtcontacts-sqlite] Store display label group to database.
+          Contributes to JB#44742 (1db5b4a)
+
+2019-02-15 Chris Adams
+
+        * Improve fetchtimes benchmark (2f621de)
+
+2019-03-22 Santtu Lakkala
+
+        * Bump version (1b709ae)
+
+2019-03-22 inz
+
+        * Merge branch 'jb44709' into 'master' (8bd1584)
+
+2019-02-25 Santtu Lakkala
+
+        * [qtcontacts-sqlite] Allow , and . as DTMF pause. Contributes to:
+          JB#44709 (589dfd9)
+
+2018-12-12 Andrew den Exter
+
+        * Merge branch 'jb36025' into 'master' (56a2909)
+
+2018-12-11 Andrew den Exter
+
+        * [qtcontacts-sqlite] Don't link against QtGui unnecessarily.
+          Contributes to JB#36025 (af621b0)
+
+2018-09-08 Alberto Mardegan
+
+        * Merge branch 'master' into xenial (8a00b34)
+
+2018-03-15 Alberto Mardegan
+
+        * First Xenial release, add Jenkinsfile (7fe5e54)
+
+2017-12-14 Chris Adams
+
+        * Bump version (babb97a)
+
+2017-12-14 chriadam
+
+        * Merge branch 'fix-test' into 'master' (c6575ff)
+        * Merge branch 'mark-override' into 'master' (2773977)
+        * Merge branch 'run-tests' into 'master' (183842b)
+
+2017-11-15 Alberto Mardegan
+
+        * [qtcontacts-sqlite] Fix aggregation test. Contributes to MER#1853
+          (106e505)
+
+2017-11-14 Alberto Mardegan
+
+        * [qtcontacts-sqlite] Workaround issue with QWaitCondition.
+          Contributes to MER#1853 (e411353)
+
+2017-11-13 Alberto Mardegan
+
+        * [qtcontacts-sqlite] Mark method overrides (99358cf)
+        * [qtcontacts-sqlite] Run tests with "make check" (88b2aeb)
+
+2017-11-13 chriadam
+
+        * Merge branch 'removed-unused-static' into 'master' (3f3577e)
+
+2017-11-12 Alberto Mardegan
+
+        * Merge branch 'master' into vivid (73be8fe)
+
+2017-11-07 chriadam
+
+        * Merge branch 'no-private' into 'master' (83d0a7d)
+
+2017-11-01 Alberto Mardegan
+
+        * [qtcontacts-sqlite-extensions] removed unused static function.
+          Contributes to MER#1842 (bd81d3a)
+
+2017-10-18 Alberto Mardegan
+
+        * tests: add missing module dependency (ae77626)
+        * [qtcontacts-sqlite] Don't require QtContacts/private (f0ac23e)
+        * [qtcontacts-sqlite] Add a bunch of missing #include directives
+          (9c00e39)
+        * [qtcontacts-sqlite] Build with C++11 (0d29dec)
+        * debian: add Debian packaging for Ubports (fa53ed5)
+
+2016-11-21 abranson
+
+        * Merge branch 'master' into 'master' (6c56890)
+
+2016-11-08 Andrew Branson
+
+        * [Qt] QFlag won't take a ulong on an LP64 environment. Contributes
+          JB#36790 (4b6ced0)
+
+2016-10-08 Martin Jones
+
+        * Bump version. (767ef11)
+
+2016-10-08 martinjones
+
+        * Merge branch 'qtupgrade-5.6' into 'master' (436927b)
+
+2016-06-11 Martin Jones
+
+        * [qtcontacts-sqlite] Compile with Qt5.6. Contributes to JB#35409
+          (a3a169d)
+
+2016-03-21 faenil
+
+        * Merge branch 'test2' into 'master' (1d98870)
+
+2016-03-20 Martin Ghosal
+
+        * [qtcontacts] Correct header file method signatures. Fixes MER#1498
+          (f8790ed)
+
+2016-03-04 Matt Vogt
+
+        * Increment version number (5856516)
+
+2016-03-04 mvogt
+
+        * Merge branch 'mer-1536' into 'master' (28e727f)
+
+2016-03-03 Matt Vogt
+
+        * [qtcontacts-sqlite] Ensure timestamps use C locale. Contributes to
+          MER#1536 (1b7d92f)
+
+2016-02-25 Chris Adams
+
+        * Bump version (d6c986d)
+
+2016-02-25 chriadam
+
+        * Merge branch 'twcsaperf' into 'master' (9606775)
+
+2016-02-23 Chris Adams
+
+        * [qtcontacts-sqlite] Remove duplicated effort from delta detection.
+          Contributes to JB#32526 (c30a0ed)
+        * [qtcontacts-sqlite] Add a benchmark for delta detection during sync
+          cycles. Contributes to JB#32526 (885a8d5)
+
+2015-11-30 jpetrell
+
+        * Merge branch 'jb26864' into 'master' (9b2950d)
+
+2015-11-27 Joona Petrell
+
+        * [license] Set package license. Contributes to JB#26864 (50c8599)
+
+2015-10-14 mvogt
+
+        * Merge pull request #200 from matthewvogt/mer-1368 (40f90b2)
+
+2015-10-13 Matt Vogt
+
+        * [qtcontacts-sqlite] Allow enum property extensions to be stored.
+          Contributes to MER#1368 (4b06f2f)
+
+2015-09-28 Matt Vogt
+
+        * Increment version number (bd16866)
+
+2015-09-28 mvogt
+
+        * Merge pull request #199 from matthewvogt/mer-1345 (928cb46)
+
+2015-09-28 Matt Vogt
+
+        * [qtcontacts-sqlite] Add missing detail fields. Contributes to
+          MER#1345 (77b18f1)
+
+2015-06-03 Chris Adams
+
+        * Bump version (262f3b5)
+        * Merge pull request #198 from nemomobile/fixunittest (bc04712)
+
+2015-06-02 Chris Adams
+
+        * [qtcontacts-sqlite] Improve handling of multiple sync target
+          constituents. Contributes to MER#1053 (e497b56)
+        * Merge pull request #197 from nemomobile/fixunittest (03e406f)
+        * [qtcontacts-sqlite] Fix broken unit test. Contributes to MER#1053
+          (f364861)
+
+2015-05-04 Chris Adams
+
+        * Bump version (df6daea)
+        * Merge pull request #195 from nemomobile/ignorablefields (8a97dc9)
+
+2015-04-30 Chris Adams
+
+        * [qtcontacts-sqlite-extensions] Allow ignorable fields to be
+          specified in TWCSA. Contributes to MER#941 (9dcbaff)
+
+2015-05-04 Chris Adams
+
+        * Merge pull request #196 from nemomobile/duplicateremoval (291bad5)
+        * [qtcontacts-sqlite] Improve remote removal sync update handling.
+          Contributes to MER#953 (78714ae)
+
+2015-04-08 Chris Adams
+
+        * Bump version (187984c)
+        * Merge pull request #194 from nemomobile/privilegedtests (f44cc65)
+        * [qtcontacts-sqlite] Don't use sticky bit for unit tests (1cd0d4a)
+
+2015-03-12 Chris Adams
+
+        * Bump version (df20a88)
+        * Merge pull request #192 from nemomobile/enforceconstraintsdebugging
+          (f115573)
+        * [qtcontacts-sqlite] Fix unit test failure (453a06b)
+
+2015-03-05 Chris Adams
+
+        * [qtcontacts-sqlite] Improve resilience against invalid sync updates
+          (916e2a0)
+
+2015-03-10 Slava Monich
+
+        * Bump version (47b5965)
+        * Merge pull request #193 from monich/entropy (c7aaef4)
+
+2015-03-09 Slava Monich
+
+        * [qtcontacts-sqlite] Fixed out-of-bounds access to local array
+          (5016286)
+
+2015-01-22 Chris Adams
+
+        * Bump version (c2e2b52)
+        * Merge pull request #190 from nemomobile/maintainmodifiability
+          (9a21e4a)
+
+2015-01-21 Chris Adams
+
+        * [qtcontacts-sqlite] Ensure that sync resolution maintains
+          modifiability flag (f413f8d)
+
+2015-01-20 Chris Adams
+
+        * Bump version (bc33cb9)
+        * Merge pull request #189 from nemomobile/fixtwcsa (f52bab0)
+        * [qtcontacts-sqlite-extensions] Fix detail addition delta detection
+          in TWCSA (712aaf7)
+        * Bump version (ba290ca)
+        * Merge pull request #188 from nemomobile/fixtwcsa (801c52e)
+
+2015-01-19 Chris Adams
+
+        * [qtcontacts-sqlite-extensions] Fix bug in delta detection in TWCSA
+          (4752cb4)
+        * [qtcontacts-sqlite-extensions] Improve debug logging from TWCSA
+          (f8bbd95)
+
+2015-01-14 mvogt
+
+        * Merge pull request #187 from matthewvogt/fix-test-privileges
+          (b35d372)
+
+2015-01-14 Matt Vogt
+
+        * [qtcontacts-sqlite] Use run-blts-root to run test steps with
+          privileges (30c2745)
+
+2015-01-12 mvogt
+
+        * Merge pull request #186 from matthewvogt/fix-ftok (1fc96a3)
+        * Merge pull request #185 from matthewvogt/primary-db-connection
+          (697f2bb)
+        * Merge pull request #184 from matthewvogt/test-isolation (bcbd5b7)
+
+2015-01-09 Matt Vogt
+
+        * [qtcontacts-sqlite] Fix invocation of ftok (9ed456c)
+        * Prefer GenericDataLocation value for locating database (49921d3)
+
+2015-01-08 Matt Vogt
+
+        * Add a minimal asynchronous test to tst_qcontactmanager (39f4c21)
+
+2015-01-07 Matt Vogt
+
+        * Use an object to encapsulate temporary mutex release (d9313de)
+
+2015-01-08 Matt Vogt
+
+        * Simplify JobThread interface to prevent potential misuse (3bc88a6)
+
+2015-01-07 Matt Vogt
+
+        * [qtcontacts-sqlite] Make the asynchronous DB connection primary
+          (c8a3ee2)
+
+2015-01-05 Matt Vogt
+
+        * [qtcontacts-sqlite] Isolate unit tests from real data (e19a668)
+
+2014-11-18 Richard Braakman
+
+        * Merge pull request #183 from amtep/master (17e79c6)
+
+2014-11-14 Richard Braakman
+
+        * Round the numbers in the ANALYZE data (857121f)
+
+2014-11-12 Richard Braakman
+
+        * drop indexes that will never be used (5bfbfb6)
+
+2014-11-11 Richard Braakman
+
+        * [performance] preseed ANALYZE data in the db (55f9d64)
+
+2014-10-23 Richard Braakman
+
+        * [tests] Add all unit tests to tests.xml (7634f10)
+        * [tests] Install tests as privileged (8a8ef79)
+
+2014-10-20 Richard Braakman
+
+        * [tests] Fix tests.xml syntax (5f76844)
+
+2014-10-15 Richard Braakman
+
+        * Merge pull request #182 from amtep/master (b370091)
+
+2014-10-13 Richard Braakman
+
+        * [performance] in queryContacts, only load wanted details (51d7954)
+
+2014-10-04 mvogt
+
+        * Merge pull request #181 from faenil/nemomerge_fixes (0d0f7fc)
+
+2014-10-03 Andrea Bernabei
+
+        * [fix] Fix compilation on glibc 2.19/gcc 4.8 (c931b08)
+
+2014-10-02 Richard Braakman
+
+        * [twowaysync] Use a fixed encoding version for OOB data (9bdac82)
+
+2014-09-19 Richard Braakman
+
+        * [qtcontacts-sqlite] Refuse to look up invalid phone numbers
+          (7643eec)
+
+2014-09-15 Richard Braakman
+
+        * [performance] Add a benchmark for Qt::ISODate (4a80074)
+
+2014-09-12 Richard Braakman
+
+        * [performance] Faster date conversion (04c76cb)
+
+2014-09-15 Richard Braakman
+
+        * [tests] Add correctness test for reading datetime from db (794ab0a)
+
+2014-09-02 Richard Braakman
+
+        * [qtcontacts-sqlite] Restore missing DetailsRemoveIndex (9151504)
+
+2014-08-26 Matt Vogt
+
+        * [qtcontacts-sqlite] Remove detail URI unique constraint (f172414)
+        * [qtcontacts-sqlite] Add missing indexes to creation statements
+          (0f8e7eb)
+
+2014-07-22 Matt Vogt
+
+        * Update exported version number (2031199)
+
+2014-07-22 mvogt
+
+        * Merge pull request #174 from matthewvogt/fix-filter-tests (0aea9fc)
+        * Merge pull request #173 from matthewvogt/missing-details (0cbed93)
+
+2014-07-22 Matt Vogt
+
+        * Unitialized QDateTime is now equivalent to the epoch date (7138189)
+        * No distinction between empty/NULL string fields (d92acd4)
+        * Adjust test expectations to match configured data (df43501)
+        * Skip tests that require support for Group contacts (1aac61b)
+        * All contacts have a timestamp detail; correct test assumption
+          (f46f330)
+        * Fix phone number filtering tests (0498a6b)
+        * Set C locale for testing (6bebd80)
+        * Remove invalid restriction on syncTarget value (840520e)
+        * Compare fields in string form if MatchFixedString is specified
+          (d78a54f)
+        * Correct the query of QDate fields (c5d4dc8)
+
+2014-07-21 Matt Vogt
+
+        * [qtcontacts-sqlite] Improve expansion of detail existence tests
+          (ad02f75)
+
+2014-07-18 Matt Vogt
+
+        * [qtcontacts-sqlite] Add support for missing detail types (8e0fb5e)
+
+2014-07-18 mvogt
+
+        * Merge pull request #172 from matthewvogt/remove-fwd-dec (1895f84)
+
+2014-07-18 Matt Vogt
+
+        * Remove no-longer-necessary forward declarations (c80f1ed)
+
+2014-07-18 mvogt
+
+        * Merge pull request #170 from matthewvogt/read-perf-improvement
+          (035e96e)
+
+2014-07-10 Matt Vogt
+
+        * [qtcontacts-sqlite] Add debug output of SQL queries (8db2b40)
+
+2014-07-04 matthewvogt
+
+        * [qtcontacts-sqlite] Simplify query handling (ff088bd)
+        * [qtcontacts-sqlite] Use maximumCount fetch hint to limit query
+          (c19743d)
+        * [qtcontacts-sqlite] Remove queryContacts internal batching
+          (4399733)
+        * [qtcontacts-sqlite] Use cross join to force query order (7c9192c)
+        * [qtcontacts-sqlite] Modify relationships query to use indexes
+          correctly (b5416b3)
+        * [qtcontacts-sqlite] Make relationship query sequential (3f8dbcd)
+
+2013-12-20 Matt Vogt
+
+        * [qtcontacts-sqlite] Un-batch the joined detail tables query
+          (96ed48f)
+
+2013-10-21 Matt Vogt
+
+        * [qtcontacts-sqlite] Join detail tables so we make a single query to
+          read details (c3fa1bd)
+
+2014-07-18 mvogt
+
+        * Merge pull request #166 from matthewvogt/schema-variation (93457de)
+
+2014-07-02 matthewvogt
+
+        * [qtcontacts-sqlite] Migrate existing databases to updated schema
+          (7825643)
+
+2014-07-01 matthewvogt
+
+        * [qtcontacts-sqlite] Alter schema for improved query speed (69e8b48)
+
+2014-07-08 mvogt
+
+        * Merge pull request #171 from matthewvogt/localized-sort (6047f96)
+
+2014-07-08 matthewvogt
+
+        * [qtcontacts-sqlite] Sort according to current locale (3ccf7ec)
+
+2014-07-03 mvogt
+
+        * Merge pull request #169 from matthewvogt/remove-auto-partial-match
+          (eb6c099)
+
+2014-07-03 matthewvogt
+
+        * [qtcontacts-sqlite] Remove partial name matching (0cbb361)
+        * [qtcontacts-sqlite] Fix extended upgrade sequence fault (66432b7)
+
+2014-07-01 mvogt
+
+        * Merge pull request #165 from matthewvogt/quick-fetchtimes (95e3564)
+        * Merge pull request #164 from special/details-index-unique (c14f8c0)
+        * Merge pull request #163 from matthewvogt/prioritize-local-details
+          (9253bfe)
+
+2014-07-01 matthewvogt
+
+        * [qtcontacts-sqlite] Add quick mode to fetchtimes (8004abd)
+
+2014-06-27 matthewvogt
+
+        * [qtcontacts-sqlite] Test priority of local details in aggregation
+          (d6c1699)
+
+2014-06-27 John Brooks
+
+        * [qtcontacts-sqlite] Make DetailsJoinIndex unique to optimize
+          queries (c26df4e)
+
+2014-06-26 mvogt
+
+        * Merge pull request #162 from matthewvogt/locked-iteration (2d0cc47)
+        * Merge pull request #161 from matthewvogt/lock-order (257dbfe)
+
+2014-06-26 matthewvogt
+
+        * [qtcontacts-sqlite] Iterate over locked data table (a03575f)
+        * [qtcontacts-sqlite] Avoid potential deadlock (52d922f)
+
+2014-06-25 mvogt
+
+        * Merge pull request #160 from matthewvogt/finish-queries (a685119)
+
+2014-06-25 matthewvogt
+
+        * [qtcontacts-sqlite] Ensure all detail table queries are finished
+          (be29954)
+
+2014-06-25 mvogt
+
+        * Merge pull request #159 from matthewvogt/null-deref2 (614ca43)
+
+2014-06-25 matthewvogt
+
+        * [qtcontacts-sqlite] Ignore results when transient data is
+          inaccessible (8814e5e)
+
+2014-06-25 mvogt
+
+        * Merge pull request #158 from matthewvogt/null-deref (e512573)
+
+2014-06-25 matthewvogt
+
+        * [qtcontacts-sqlite] Do not dereference null table pointer (9d50778)
+
+2014-06-24 mvogt
+
+        * Merge pull request #157 from matthewvogt/locking (6052043)
+
+2014-06-24 matthewvogt
+
+        * [qtcontacts-sqlite] Prefer quick_check to integrity_check (3aa839d)
+        * [qtcontacts-sqlite] Do not lock the write mutex during startup
+          (f291dc7)
+
+2014-06-24 mvogt
+
+        * Merge pull request #156 from matthewvogt/transient-timestamp
+          (5d7eff8)
+
+2014-06-23 matthewvogt
+
+        * [qtcontacts-sqlite] Allow filtering/sorting on transient update
+          timestamp (1c90729)
+
+2014-06-19 matthewvogt
+
+        * Update IsOnline status flag from transient details (8363876)
+        * Filter out transient details that are not in the defintion mask
+          (1a00a7d)
+        * [qtcontacts-sqlite] Include transient state when filtering or
+          sorting on presence (8d684a2)
+
+2014-06-12 mvogt
+
+        * Merge pull request #154 from matthewvogt/shared-memory (d15160f)
+
+2014-06-12 matthewvogt
+
+        * [qtcontacts-sqlite] Attempt to fallback to previous SHM generation
+          (9353bdf)
+
+2014-06-11 matthewvogt
+
+        * [qtcontacts-sqlite] Fix the definition of initial process (af4542e)
+
+2014-06-09 matthewvogt
+
+        * Remove unused function (59351eb)
+
+2014-06-06 matthewvogt
+
+        * [qtcontacts-sqlite] Optionally allow non-durable updates (5386e10)
+
+2014-06-05 mvogt
+
+        * Merge pull request #153 from matthewvogt/cleanup (b0fc81c)
+
+2014-06-03 matthewvogt
+
+        * [qtcontacts-sqlite] Simplify class declaration for
+          TwoWayContactSyncAdapter (c4cc834)
+
+2014-06-03 Matt Vogt
+
+        * Update exported version number (0e5954a)
+
+2014-06-03 mvogt
+
+        * Merge pull request #152 from matthewvogt/sync-efficiency (79f19b7)
+
+2014-06-02 matthewvogt
+
+        * [qtcontacts-sqlite] Simplify statements with temporary variables
+          (535927f)
+        * [qtcontacts-sqlite] Avoid unnecessary stores after sync (fde3793)
+        * [qtcontacts-sqlite] Test for relevance to current account earlier
+          (5782606)
+        * [qtcontacts-sqlite] Minimize data extraction for sync process
+          (dbdb867)
+
+2014-05-30 Matt Vogt
+
+        * Update exported version number (752f5c4)
+
+2014-05-30 mvogt
+
+        * Merge pull request #151 from matthewvogt/compress-oob (f5eeb54)
+
+2014-05-28 matthewvogt
+
+        * [qtcontacts-sqlite] Automatic compression for OOB data (dad2604)
+        * [qtcontacts-sqlite] Add function to fetch OOB keys (39f6ede)
+
+2014-05-21 Chris Adams
+
+        * Bump version (d2fd19e)
+
+2014-05-20 Matt Vogt
+
+        * [qtcontacts-sqlite] Make rollback actually rollback (e3849cf)
+
+2014-05-19 Chris Adams
+
+        * Bump version (29781b1)
+
+2014-05-19 Matt Vogt
+
+        * [qtcontacts-sqlite] Preserve timezone in QContactPresence timestamp
+          (0fa98ce)
+
+2014-05-08 Matt Vogt
+
+        * Update exported version (78e810e)
+
+2014-05-08 mvogt
+
+        * Merge pull request #144 from matthewvogt/dtmf-translate (c75d6d7)
+
+2014-04-30 Chris Adams
+
+        * Bump version (021912a)
+
+2014-04-30 chriadam
+
+        * Merge pull request #146 from chriadam/noduplicates (6b2897f)
+
+2014-04-29 Chris Adams
+
+        * [qtcontacts-sqlite] Detect partial-sync artifacts (f8fe0ea)
+
+2014-04-29 mvogt
+
+        * Merge pull request #145 from matthewvogt/self-contact-check
+          (88795b0)
+
+2014-04-28 Matt Vogt
+
+        * [qtcontacts-sqlite] Correct self-contact removal prevention
+          (80bc2b3)
+        * [qtcontacts-sqlite] Update existing normalized phone numbers
+          (52f12ba)
+        * [qtcontacts-sqlite] Normalize 'x' and 'X' DTMF chars to 'p'
+          (af10e08)
+
+2014-04-29 mvogt
+
+        * Merge pull request #143 from matthewvogt/phone-validation (867e165)
+
+2014-04-27 Matt Vogt
+
+        * [qtcontacts-sqlite] Allow '+' in DTMF section when validating phone
+          number (d8f21d4)
+
+2014-04-23 Matt Vogt
+
+        * Update exported pkgconfig version (6c2da15)
+
+2014-04-24 mvogt
+
+        * Merge pull request #142 from matthewvogt/invalid-alpha-chars
+          (25964b7)
+
+2014-04-23 Matt Vogt
+
+        * [qtcontacts-sqlite] Skip invalid alphabetic characters in phone
+          numbers (ce88e62)
+
+2014-04-23 mvogt
+
+        * Merge pull request #141 from matthewvogt/detail-uri-mangling
+          (4f2fe48)
+
+2014-04-22 Matt Vogt
+
+        * Remove some unnecessary template bloat (d0c36e8)
+        * [qtcontacts-sqlite] Mangle detail URIs after aggregate ID is
+          allocated (552a0b1)
+
+2014-04-08 mvogt
+
+        * Merge pull request #140 from
+          matthewvogt/localize-prepared-statements (9c9747c)
+
+2014-04-07 Matt Vogt
+
+        * [qtcontacts-sqlite] Keep SQL statements local with the code that
+          executes them (bb5ad2f)
+
+2014-04-06 Matt Vogt
+
+        * [qtcontacts-sqlite] Move properties into database class (c34a624)
+        * [qtcontacts-sqlite] Make ContactsDatabase a proper class (d415205)
+
+2014-04-08 Chris Adams
+
+        * Bump version (4e775a6)
+
+2014-04-08 chriadam
+
+        * Merge pull request #139 from chriadam/orwsemarr (37e813a)
+
+2014-04-08 Chris Adams
+
+        * [qtcontacts-sqlite] Relax permissions on created semaphores
+          (b50326d)
+
+2014-04-07 chriadam
+
+        * Merge pull request #138 from nemomobile/next (f76ce6a)
+
+2014-04-07 mvogt
+
+        * Merge pull request #137 from matthewvogt/integrity-check (21c9e7d)
+
+2014-03-20 Matt Vogt
+
+        * [qtcontacts-sqlite] Verify database integrity at open (e634600)
+
+2014-04-06 Matt Vogt
+
+        * Fix unstable test (2bbe034)
+
+2014-04-04 chriadam
+
+        * Merge pull request #136 from chriadam/nextfixwarning (a2a041a)
+
+2014-04-04 Chris Adams
+
+        * [qtcontacts-sqlite] Remove unused local variable (402399c)
+
+2014-04-03 mvogt
+
+        * Merge pull request #135 from matthewvogt/export-sync (a06dd6a)
+
+2014-04-02 Matt Vogt
+
+        * Remove unnecessary trace output (6b2db6b)
+        * [qtcontacts-sqlite] Use contact ID rather than GUID for
+          local/remote identification (abcd09b)
+        * [qtcontacts-sqlite] When comparing contact versions, use detail
+          equivalence (0c7e637)
+
+2014-03-31 Matt Vogt
+
+        * [qtcontacts-sqlite] Control aggregation behavior at runtime
+          (918b071)
+        * [qtcontacts-sqlite] Allow relevant detail types to be specified
+          (a5908a3)
+        * Improve function naming (e586469)
+        * [qtcontact-sqlite] Unify detail promotion logic (e053b8c)
+
+2014-03-27 Matt Vogt
+
+        * Fix comment to describe current situation (2c86cdd)
+        * [qtcontacts-sqlite] Do not use OriginMetadata for sync contact
+          identification (2972070)
+        * [qtcontacts-sqlite] Ignore non-data values when comparing sync
+          details (a6c4e08)
+
+2014-03-26 Matt Vogt
+
+        * [qtcontacts-sqlite] Report added contacts IDs via storeSyncContacts
+          (383b23e)
+        * [qtcontacts-sqlite] Sync adapters should not register for presence
+          changes (e5cab18)
+
+2014-03-09 Matt Vogt
+
+        * [qtcontacts-sqlite] Fix timestamps to have millisecond resolution
+          (d2ff9a6)
+
+2014-03-25 Matt Vogt
+
+        * [qtcontacts-sqlite] Suppress regeneration when the aggregate will
+          be clobbered (69760fb)
+        * [qtcontacts-sqlite] Aggregate timestamps should be composed from
+          constituents (53f0135)
+
+2014-03-09 Matt Vogt
+
+        * [qtcontacts-sqlite] Allow details to be marked non-exportable
+          (b8ec122)
+
+2014-03-24 Matt Vogt
+
+        * Correct indentation (345ea79)
+
+2014-03-05 Matt Vogt
+
+        * [qtcontacts-sqlite] Provide export mode for synchronization export
+          (f8b3941)
+
+2014-03-27 Matt Vogt
+
+        * [qtcontacts-sqlite] Connect to the correct signals on privilege
+          fallback (a1dfbe3)
+
+2014-03-26 chriadam
+
+        * Merge pull request #134 from chriadam/fixtwcsa (0c2e5fb)
+
+2014-03-26 Chris Adams
+
+        * [qtcontacts-sqlite-extensions] Improve detail delta semantics in
+          TWCSA (9f73fdb)
+
+2014-03-25 chriadam
+
+        * Merge pull request #132 from chriadam/twcsatnext (3bd9206)
+
+2014-03-17 Chris Adams
+
+        * [qtcontacts-sqlite-extensions] Add unit tests for
+          TwoWayContactSyncAdapter (6959456)
+
+2014-03-25 chriadam
+
+        * Merge pull request #133 from chriadam/privnext (ce7def6)
+
+2014-03-21 Chris Adams
+
+        * [qtcontacts-sqlite] Use less error-prone method of detecting
+          privileges (8897fec)
+
+2014-03-25 mvogt
+
+        * Merge pull request #131 from matthewvogt/non-privileged (7986ef8)
+
+2013-12-29 Matt Vogt
+
+        * [qtcontacts-sqlite] Open non-privileged DB when specified (95803f4)
+
+2014-03-06 Matt Vogt
+
+        * Correct wrong function declarations (677901c)
+
+2014-03-04 Matt Vogt
+
+        * Remove tests specific to unrelated contact managers (0772b90)
+
+2014-03-24 mvogt
+
+        * Merge pull request #130 from matthewvogt/aggregate-select (c5af4c5)
+
+2014-03-23 Matt Vogt
+
+        * [qtcontacts-sqlite] Supply the target aggregate for incidental
+          contact creation (33a20ca)
+
+2014-03-24 mvogt
+
+        * Merge pull request #129 from matthewvogt/contact-type (5497067)
+
+2014-03-23 Matt Vogt
+
+        * [qtcontacts-sqlite] Create the isDeactivated index in new databases
+          (ad7460c)
+        * [qtcontacts-sqlite] Support the QContactType detail properly
+          (79c0144)
+
+2014-03-21 Matt Vogt
+
+        * Bump version (d88173b)
+
+2014-03-21 mvogt
+
+        * Merge pull request #126 from matthewvogt/type-filter (fa8b2fa)
+
+2014-03-21 Matt Vogt
+
+        * [qtcontacts-sqlite] Emergency support for QContactType filter
+          (a681552)
+        * Bump version (0b51d89)
+
+2014-03-21 mvogt
+
+        * Merge pull request #125 from matthewvogt/incidental-aggregate
+          (5b8b0ab)
+
+2014-03-20 Matt Vogt
+
+        * [qtcontacts-sqlite] Ensure incidental contact has the required
+          aggregate (862fcc1)
+
+2014-03-20 Chris Adams
+
+        * Bump version (491201a)
+
+2014-03-20 chriadam
+
+        * Merge pull request #123 from chriadam/regenscaggs (1a34851)
+
+2014-03-20 Chris Adams
+
+        * [qtcontacts-sqlite] Regenerate aggregates of removed synctarget
+          contacts (0679946)
+        * Bump version (cd507c2)
+
+2014-03-20 chriadam
+
+        * Merge pull request #122 from chriadam/overridedelta (f44596e)
+
+2014-03-20 Chris Adams
+
+        * [qtcontacts-sqlite-extensions] Allow TWCSA implementations to
+          override detail delta detection (b0d2fa5)
+
+2014-03-19 Matt Vogt
+
+        * Update exported version number (6bd2a78)
+
+2014-03-20 mvogt
+
+        * Merge pull request #120 from matthewvogt/engine-cast (ffafb21)
+
+2014-03-18 Matt Vogt
+
+        * [qtcontacts-sqlite] Use static cast for manager engine type cast
+          (5d77aed)
+
+2014-03-17 mvogt
+
+        * Merge pull request #119 from matthewvogt/fix-multi-mod (c7ee978)
+
+2014-03-16 Matt Vogt
+
+        * [qtcontacts-sqlite] Fix storeSyncContacts data loss (96bc899)
+
+2014-03-15 Matt Vogt
+
+        * Update exported pkgconfig version (cc498f9)
+
+2014-03-15 mvogt
+
+        * Merge pull request #117 from chriadam/exportedidsfix (d3aa448)
+        * Merge pull request #118 from matthewvogt/incidental-st-constituent
+          (ebec297)
+
+2014-03-15 Chris Adams
+
+        * [qtcontacts-sqlite] Don't remove modified sync contacts from
+          exportedIds (4e431e5)
+
+2014-03-14 Matt Vogt
+
+        * [qtcontacts-sqlite] Preserve the existing ID of an exported contact
+          (2afa5eb)
+        * Update exported pkgconfig version (a8a327c)
+
+2014-03-14 mvogt
+
+        * Merge pull request #110 from chriadam/2waysync (eaa2e0c)
+
+2014-02-25 Chris Adams
+
+        * [qtcontacts-sqlite-extensions] Implement generic 2-way-sync adapter
+          (8078187)
+
+2014-03-14 chriadam
+
+        * Merge pull request #116 from chriadam/removechildless (0df0949)
+
+2014-03-13 Chris Adams
+
+        * [qtcontacts-sqlite] Remove childless aggregates after applying sync
+          delta (bfabd26)
+
+2014-03-14 chriadam
+
+        * Merge pull request #115 from chriadam/fixincidental (2e45ea8)
+
+2014-03-13 Chris Adams
+
+        * [qtcontacts-sqlite] Ensure incidental contact is linked into
+          aggregate (00c38b3)
+
+2014-03-12 mvogt
+
+        * Merge pull request #114 from matthewvogt/notify-delete (61abb82)
+
+2014-03-11 Matt Vogt
+
+        * [qtcontacts-sqlite] Deletions should trigger syncContactsChanged
+          (cafa7f4)
+
+2014-03-10 mvogt
+
+        * Merge pull request #108 from matthewvogt/two-way-support (737c27a)
+
+2014-03-05 Matt Vogt
+
+        * [qtcontacts-sqlite] Promote some unpromotable details to partial
+          aggregate (2734658)
+
+2014-02-26 Matt Vogt
+
+        * [qtcontacts-sqlite] Support add/remove contacts via
+          storeSyncContacts (15c6668)
+        * [qtcontacts-sqlite] Add function to access contact manager engine
+          (73b2e8b)
+        * [qtcontacts-sqlite] Create sync-target constituent when required
+          (0efad1f)
+
+2014-02-24 Matt Vogt
+
+        * [qtcontacts-sqlite] Remove obsolete context type definitions
+          (ebf655c)
+        * [qtcontacts-sqlite] Ensure detail comparison verifies key/value
+          matches (0898441)
+        * Remove invalid TODO comments (2fd8b6d)
+        * [qtcontacts-sqlite] Use temp table to find modifiable details
+          (27e6cf3)
+        * Remove unused timestamp parameter (e82753e)
+        * [qtcontacts-sqlite] Fix aggregation query where subject contains
+          multiple details (77e7d39)
+        * Rearrange SQL query for improved consistency. (fd60998)
+        * Remove obsolete TODO (bf3dc68)
+        * Avoid conversions from internal to API ID when calling readContacts
+          (2147ea3)
+        * Use definition mask to minimize writes during aggregation.
+          (3cace19)
+
+2014-02-23 Matt Vogt
+
+        * [qtcontacts-sqlite] Create interface for out-of-band storage
+          (f1a7361)
+
+2014-02-21 Matt Vogt
+
+        * Fix composition of gender detail update (6ec782d)
+
+2014-02-23 Matt Vogt
+
+        * [qtcontacts-sqlite] Report changed sync targets (d63c48b)
+
+2014-02-24 Matt Vogt
+
+        * Use typedef to simplify declarations (1b70916)
+
+2014-02-23 Matt Vogt
+
+        * [qtcontacts-sqlite] Support functions for two-way sync adaptors
+          (f5abc1a)
+
+2014-02-19 Matt Vogt
+
+        * [qtcontacts-sqlite] Simplify reader/writer instantiation (24ccffc)
+
+2014-02-17 Matt Vogt
+
+        * Fix autotest broken by change to store date for birthday details
+          (549702a)
+
+2014-02-26 mvogt
+
+        * Merge pull request #111 from matthewvogt/correct-name-detection
+          (0632327)
+
+2014-02-26 Matt Vogt
+
+        * [qtcontacts-sqlite] Correct the detection of inadequate names
+          (4c71c3e)
+
+2014-02-25 mvogt
+
+        * Merge pull request #109 from matthewvogt/correct-display-label
+          (92c9a0c)
+
+2014-02-24 Matt Vogt
+
+        * [qtcontacts-sqlite] Do not skip bind of empty display label
+          (b1b017f)
+
+2014-02-10 mvogt
+
+        * Merge pull request #107 from matthewvogt/date-types (5cf67ac)
+
+2014-02-10 Matt Vogt
+
+        * [qtcontact-sqlite] Return correctly typed date information
+          (71e700c)
+        * Update exported version number (71162ad)
+
+2014-02-10 mvogt
+
+        * Merge pull request #106 from matthewvogt/deactivation (17a5191)
+
+2014-02-06 Matt Vogt
+
+        * [qtcontact-sqlite] Allow contacts to be deactivated (d602290)
+
+2014-02-06 mvogt
+
+        * Merge pull request #105 from matthewvogt/deletion-log (cf89ad6)
+
+2014-01-21 Matt Vogt
+
+        * [qtcontacts-sqlite] Add limited support for deleted contact change
+          log filtering (a18a188)
+
+2014-02-04 Matt Vogt
+
+        * Update exported version number (5dd858c)
+
+2014-02-04 mvogt
+
+        * Merge pull request #104 from matthewvogt/remove-qt4 (a4eba14)
+
+2014-01-30 John Brooks
+
+        * packaging: use _smp_mflags (8c934ce)
+
+2014-01-21 Matt Vogt
+
+        * [qtcontacts-sqlite] Remove SKIP_TEST definition (e35df0b)
+        * [qtcontacts-sqlite] Remove QContactIdType typedef (8de9273)
+        * [qtcontacts-sqlite] Remove Qt4 support (9dfdb77)
+
+2014-01-13 mvogt
+
+        * Merge pull request #103 from matthewvogt/user-version (b7aba1e)
+
+2014-01-13 Matt Vogt
+
+        * [qtcontacts-sqlite] Index the likely filter columns on Contacts
+          table (2c818a0)
+        * [qtcontacts-sqlite] Switch to user_version for schema management
+          (b125f36)
+
+2014-01-12 mvogt
+
+        * Merge pull request #101 from matthewvogt/aggregate-nicknames
+          (4bfe7d6)
+
+2014-01-09 Matt Vogt
+
+        * Whitespace cleanup (3e430d7)
+        * [qtcontacts-sqlite] Aggregate using only nickname where real names
+          are absent (4d99674)
+
+2014-01-01 Matt Vogt
+
+        * [qtcontacts-sqlite] Revert "[qtcontacts-sqlite] Fix: Check for
+          read/write capability using QFileInfo" (97e2840)
+
+2013-12-30 mvogt
+
+        * Merge pull request #99 from matthewvogt/query-improvements
+          (815595a)
+
+2013-11-15 Matt Vogt
+
+        * [qtcontacts-sqlite] Use transient ID tables to avoid bound
+          variables limit (687f444)
+
+2013-12-18 Matt Vogt
+
+        * [qtcontacts-sqlite] Insert rows into temp tables without execBatch
+          (428074c)
+        * [qtcontacts-sqlite] Do not use order by clause when unnecessary
+          (a443e99)
+        * [qtcontacts-sqlite] Prefer to compare internal IDs (c01bec0)
+        * [qtcontacts-sqlite] Do not filter out non-aggregates with ID filter
+          (c0bd6b3)
+        * [qtcontacts-sqlite] Expand query fetch timing variations (03b0fc4)
+
+2013-12-30 mvogt
+
+        * Merge pull request #90 from martyone/master (0c61bdf)
+
+2013-12-12 mvogt
+
+        * Merge pull request #98 from
+          matthewvogt/no-partial-match-with-hyphen (26503f8)
+
+2013-12-12 Matt Vogt
+
+        * [qtcontacts-sqlite] Disable automatic partial match when firstName
+          is hyphenated (60470f8)
+
+2013-12-09 Matt Vogt
+
+        * Update exported version number (14df1e2)
+
+2013-12-09 mvogt
+
+        * Merge pull request #95 from matthewvogt/presence-updates (e2a773e)
+        * Merge pull request #97 from matthewvogt/presence-order (967d6a4)
+
+2013-12-04 Matt Vogt
+
+        * [qtcontacts-sqlite] Sort presence states by availability (a1c0f1a)
+
+2013-11-29 Matt Vogt
+
+        * [qtcontacts-sqlite] Suppress presence change notification by
+          default (3762516)
+
+2013-11-25 Matt Vogt
+
+        * [qtcontacts-sqlite] Report presence changes independently (64884db)
+        * [qtcontacts-sqlite] Use definition mask for aggregate update
+          (d5ca58a)
+
+2013-11-11 mvogt
+
+        * Merge pull request #93 from matthewvogt/global-presence (ff253a6)
+
+2013-11-12 Matt Vogt
+
+        * [qtcontacts-sqlite] Correct the derivation of global presence
+          (bc0a2c9)
+
+2013-10-25 Martin Kampas
+
+        * [qtcontacts-sqlite] Fix: Check for read/write capability using
+          QFileInfo (19b030b)
+
+2013-11-06 chriadam
+
+        * Merge pull request #92 from chriadam/fixfd (51edda0)
+
+2013-11-07 Chris Adams
+
+        * [qtcontacts-sqlite] Close database on destruction. (7b5a15b)
+
+2013-10-29 mvogt
+
+        * Merge pull request #91 from matthewvogt/exclude-self (88e9cac)
+
+2013-10-30 Matt Vogt
+
+        * [qtcontacts-sqlite] Exclude self contact from aggregation (3483d5a)
+
+2013-10-23 chriadam
+
+        * Merge pull request #89 from chriadam/gread (61a5c83)
+
+2013-10-24 Chris Adams
+
+        * [qtcontacts-sqlite] Check for read/write capability using QFileInfo
+          (e4f626a)
+
+2013-10-20 mvogt
+
+        * Merge pull request #88 from matthewvogt/return-null-values
+          (db33da6)
+
+2013-10-21 Matt Vogt
+
+        * [qtcontacts-sqlite] Return null values where possible (a92547b)
+
+2013-10-20 mvogt
+
+        * Merge pull request #87 from matthewvogt/relationships (bb5f920)
+
+2013-10-21 Matt Vogt
+
+        * [qtcontacts-sqlite] Simplifiy relationship query (bc7f540)
+
+2013-10-17 mvogt
+
+        * Merge pull request #85 from matthewvogt/extra-fields (96ee7fa)
+
+2013-10-18 Matt Vogt
+
+        * [qtcontacts-sqlite] Extend QContactOnlineAccount with display names
+          (0bfda97)
+        * [qtcontacts-sqlite] Correct the handling of online accounts
+          capabilities field (bf27a57)
+
+2013-10-17 mvogt
+
+        * Merge pull request #84 from matthewvogt/max-digits (f6c1c3a)
+
+2013-10-18 Matt Vogt
+
+        * [qtcontacts-sqlite] Increase the maximum digits used in minimized
+          phone numbers (75bf7b7)
+
+2013-10-17 mvogt
+
+        * Merge pull request #83 from matthewvogt/single-thread (f324a8b)
+
+2013-10-17 Matt Vogt
+
+        * [qtcontacts-sqlite] Enforce single threaded access to contacts
+          database (0e79bc1)
+
+2013-10-16 mvogt
+
+        * Merge pull request #82 from matthewvogt/import-fixes (21e00a3)
+
+2013-10-17 Matt Vogt
+
+        * [qtcontacts-sqlite] Add support for Address subTypes field
+          (6472dda)
+        * [qtcontacts-sqlite] Correct type of Anniversary type column
+          (e76a82a)
+        * [qtcontacts-sqlite] Allow 'local' and 'was_local' in a save batch
+          (e24465f)
+
+2013-10-13 mvogt
+
+        * Merge pull request #80 from matthewvogt/multi-guid (1ce037a)
+        * Merge pull request #79 from matthewvogt/was-local (5259dfa)
+
+2013-10-14 Matt Vogt
+
+        * [qtcontacts-sqlite] Allow multiple GUID details (6221de5)
+        * [qtcontacts-sqlite] Convert local to was_local on creation
+          (558e0d3)
+
+2013-10-13 mvogt
+
+        * Merge pull request #78 from matthewvogt/named-params (d50a7fa)
+
+2013-10-14 Matt Vogt
+
+        * [qtcontacts-sqlite] Use named parameters in temp table queries
+          (1466f44)
+
+2013-10-10 chriadam
+
+        * Merge pull request #77 from chriadam/aggregation (3127e89)
+
+2013-10-11 Chris Adams
+
+        * [qtcontacts-sqlite] Allow aggregation from the same synctarget
+          (9d472b7)
+
+2013-10-09 mvogt
+
+        * Merge pull request #76 from matthewvogt/modifiable-was-local
+          (143d07a)
+
+2013-10-10 Matt Vogt
+
+        * [qtcontacts-sqlite] was_local contacts should be modifiable
+          (882040e)
+        * [qtcontacts-sqlite] Rewrite provenance unless it indicates
+          aggregation (82608bf)
+
+2013-10-09 mvogt
+
+        * Merge pull request #75 from matthewvogt/extend-provenance (62e946a)
+
+2013-10-09 Matt Vogt
+
+        * Expand test to cover ReadOnly access constraint (b08de5c)
+        * [qtcontacts-sqlite] Add syncTarget value to provenance string
+          (764252e)
+
+2013-10-07 mvogt
+
+        * Merge pull request #74 from matthewvogt/fix-url-type (9e6185e)
+
+2013-10-05 Matt Vogt
+
+        * [qtcontacts-sqlite] Return URL fields in QUrl form (d5eb803)
+
+2013-10-04 mvogt
+
+        * Merge pull request #73 from matthewvogt/origin-md-bypass (3c4fde2)
+
+2013-10-04 Matt Vogt
+
+        * Fix date time comparison in aggregation test (b8f12ba)
+        * [qtcontacts-sqlite] Allow multiple aggregates to aggregate unique
+          details (0a3f3ec)
+        * [qtcontacts-sqlite] Do not promote origin metadata details
+          (07d9355)
+
+2013-10-02 mvogt
+
+        * Merge pull request #72 from matthewvogt/missed-index (1e3eb4a)
+
+2013-10-03 Matt Vogt
+
+        * [qtcontacts-sqlite] Add missing index definition to configuration
+          (e0873ac)
+
+2013-10-02 mvogt
+
+        * Merge pull request #71 from matthewvogt/warnings (9a57a4a)
+
+2013-10-03 Matt Vogt
+
+        * [qtcontacts-sqlite] Emit warnings without configuration (05afb3e)
+
+2013-10-01 chriadam
+
+        * Merge pull request #70 from chriadam/master (2b46e6d)
+
+2013-10-02 Chris Adams
+
+        * [qtcontacts-sqlite] Add automated test definitions (35095e3)
+
+2013-10-01 chriadam
+
+        * Merge pull request #69 from chriadam/master (afde58f)
+
+2013-10-02 Chris Adams
+
+        * [qtcontacts-sqlite] Always set ModifiedTimestamp on save. (a94605a)
+
+2013-10-01 mvogt
+
+        * Merge pull request #68 from matthewvogt/evgeny-fix (4db8382)
+
+2013-10-02 Matt Vogt
+
+        * [qtcontacts-sqlite] Ensure modifiable details remain modifiable
+          (59c5459)
+
+2013-09-30 chriadam
+
+        * Merge pull request #67 from chriadam/suppresswarnings (ae6c290)
+
+2013-09-30 Chris Adams
+
+        * [qtcontacts-sqlite] Suppress debug output by default (2c4b058)
+
+2013-09-26 Matt Vogt
+
+        * Update exported version number (6456663)
+
+2013-09-25 mvogt
+
+        * Merge pull request #66 from matthewvogt/extended-detail (fbfa664)
+
+2013-09-26 Matt Vogt
+
+        * [qtcontacts-sqlite] Support QContactExtendedDetail (b8084fa)
+
+2013-09-23 mvogt
+
+        * Merge pull request #65 from matthewvogt/gender-exclude (d474bee)
+
+2013-09-24 Matt Vogt
+
+        * [qtcontacts-sqlite] Exclude aggregation candidates by inappropriate
+          gender (dd4c04f)
+
+2013-09-23 mvogt
+
+        * Merge pull request #64 from matthewvogt/partial-matches (ced687c)
+
+2013-09-24 Matt Vogt
+
+        * Prefer explicit conversion from latin1 (a6143d3)
+        * [qtcontacts-sqlite] Query for gender correctly (5ddb5ab)
+        * [qtcontacts-sqlite] Fix promotion of gender details (fe45747)
+        * [qtcontacts-sqlite] Match partial names in either direction
+          (f7da228)
+
+2013-09-22 mvogt
+
+        * Merge pull request #63 from matthewvogt/local-guid (0d8166f)
+
+2013-09-23 Matt Vogt
+
+        * Remove duplication of sync target values. (7ccc3b2)
+        * [qtcontacts-sqlite] Automatically allocate GUID for local contacts
+          (af7a7b4)
+
+2013-09-22 mvogt
+
+        * Merge pull request #62 from matthewvogt/sync-bug (eb2a96b)
+
+2013-09-20 Matt Vogt
+
+        * [qtcontacts-sqlite] Make modifiable property consistent (f046c8d)
+
+2013-09-09 mvogt
+
+        * Merge pull request #61 from matthewvogt/empty-string-test (97cf2a1)
+
+2013-09-10 Matt Vogt
+
+        * Add test for empty string match (77a2217)
+        * [qtcontacts-sqlite] Match correctly on empty string detail value
+          (05f15fc)
+
+2013-09-09 mvogt
+
+        * Merge pull request #60 from matthewvogt/execbatch-removal (f7f536c)
+
+2013-09-10 Matt Vogt
+
+        * [qtcontacts-sqlite] Do not drop temporary tables after use
+          (687ef95)
+        * [qtcontacts-sqlite] Include cumulative time in fetchtimes output
+          (abcb3de)
+        * [qtcontacts-sqlite] Use prepared queries for batch selects
+          (769ca3b)
+        * [qtcontacts-sqlite] Remove unnecessary nested selects (a350557)
+        * [qtcontacts-sqlite] Do not use execBatch for select queries
+          (bcaf2a0)
+        * [qtcontacts-sqlite] Export temporary table functions (034724d)
+
+2013-09-06 Matt Vogt
+
+        * Update exported pkgconfig version (66bf038)
+
+2013-09-05 mvogt
+
+        * Merge pull request #59 from matthewvogt/writable-sync-targets
+          (1c24171)
+
+2013-09-06 Matt Vogt
+
+        * [qtcontacts-sqlite] Allow syncTarget details to be modifiable
+          (02f3201)
+
+2013-09-04 mvogt
+
+        * Merge pull request #58 from matthewvogt/provenance (e786219)
+
+2013-09-05 Matt Vogt
+
+        * [qtcontacts-sqlite] Record the provenance of aggregated details
+          (c7aefc8)
+
+2013-09-03 mvogt
+
+        * Merge pull request #57 from matthewvogt/synchronous (ee1d585)
+
+2013-09-04 Matt Vogt
+
+        * [qtcontacts-sqlite] Specify synchronous mode (7ae9d08)
+
+2013-09-03 mvogt
+
+        * Merge pull request #56 from matthewvogt/immediate-locks (7a49701)
+
+2013-09-04 Matt Vogt
+
+        * [qtcontacts-sqlite] Use immediate locking mode for transactions
+          (5a8e152)
+
+2013-09-03 mvogt
+
+        * Merge pull request #55 from matthewvogt/trim2 (a676a00)
+
+2013-09-04 Matt Vogt
+
+        * Also trim display label (b6a10cb)
+
+2013-09-03 mvogt
+
+        * Merge pull request #54 from matthewvogt/trim (aa21907)
+
+2013-09-04 Matt Vogt
+
+        * [qtcontacts-sqlite] Trim user input data (620ce5e)
+
+2013-09-01 mvogt
+
+        * Merge pull request #53 from matthewvogt/finish-query (0a39427)
+
+2013-09-02 Matt Vogt
+
+        * [qtcontacts-sqlite] Ensure queries are completed (e90493c)
+
+2013-08-25 chriadam
+
+        * Merge pull request #52 from chriadam/changelog (525691a)
+
+2013-08-21 Chris Adams
+
+        * [qtcontacts-sqlite] Improve support for changelog / timestamps
+          (b90f1f6)
+
+2013-08-20 mvogt
+
+        * Merge pull request #50 from matthewvogt/flags (89916ec)
+
+2013-08-20 Matt Vogt
+
+        * [qtcontacts-sqlite] Validate characters in dial string if required
+          (39c9b52)
+        * [qtcontacts-sqlite] Use QFlags for improved usability (5b00ac8)
+
+2013-08-19 mvogt
+
+        * Merge pull request #49 from matthewvogt/debug (2d98dd0)
+
+2013-08-20 Matt Vogt
+
+        * Report detail URI values on insert error (dbe13b8)
+
+2013-08-19 mvogt
+
+        * Merge pull request #48 from matthewvogt/minimal-phone-number
+          (9977a2c)
+
+2013-08-20 Matt Vogt
+
+        * Increment pkgconfig version (7e5f8c9)
+        * [qtcontacts-sqlite] Create exported version of phone number utility
+          functions (b9aa353)
+        * Remove obsolete file from project (7ca6eec)
+
+2013-08-15 Chris Adams
+
+        * Bump version for release (8248ef6)
+
+2013-08-15 chriadam
+
+        * Merge pull request #47 from chriadam/centraldata (523c097)
+
+2013-08-08 Chris Adams
+
+        * [qtcontacts-sqlite] Use centralised database location (d488b81)
+
+2013-08-06 mvogt
+
+        * Merge pull request #46 from matthewvogt/fixup (915a2ab)
+
+2013-08-07 Matt Vogt
+
+        * Fix test data changes causing new failures (5483129)
+
+2013-08-06 mvogt
+
+        * Merge pull request #45 from matthewvogt/match-flags (e0d89fe)
+
+2013-08-07 Matt Vogt
+
+        * [qtcontacts-sqlite] Add support for filters matching
+          QContactStatusFlags (70d1578)
+
+2013-08-05 mvogt
+
+        * Merge pull request #44 from matthewvogt/online-flag (d4cb80d)
+
+2013-08-05 Matt Vogt
+
+        * [qtcontacts-sqlite] Add status flag for online (9cb4c18)
+
+2013-08-05 Chris Adams
+
+        * Bump version for release (7315705)
+
+2013-08-04 chriadam
+
+        * Merge pull request #42 from chriadam/aggquery (6ec7717)
+        * Merge pull request #43 from chriadam/cachequeries (665c947)
+
+2013-08-02 Chris Adams
+
+        * [qtcontacts-sqlite] Use setForwardOnly() on SELECT queries
+          (2d51b5f)
+        * [qtcontacts-sqlite] Cache detail tables queries (7aa4081)
+        * [qtcontacts-sqlite] Improve aggregation heuristic (0644f5b)
+
+2013-08-01 chriadam
+
+        * Merge pull request #41 from chriadam/updates (b5a09a1)
+
+2013-08-01 Chris Adams
+
+        * [qtcontacts-sqlite] Improve update performance (6f600c6)
+
+2013-07-31 Chris Adams
+
+        * Bump version for release (e239610)
+
+2013-07-31 chriadam
+
+        * Merge pull request #39 from chriadam/batchaggregate (0f556dc)
+
+2013-07-31 Chris Adams
+
+        * [qtcontacts-sqlite] Improve aggregate search logic and improve
+          benchmark (24e1103)
+
+2013-07-30 chriadam
+
+        * Merge pull request #40 from chriadam/moreindexes (7c6736f)
+
+2013-07-31 Chris Adams
+
+        * [qtcontacts-sqlite] Add more indexes for details tables (ba9f48e)
+
+2013-07-31 Matt Vogt
+
+        * Update outdated pkgconfig version (3be14bc)
+
+2013-07-30 Matt Vogt
+
+        * Update spec files to new version. (db3dc9d)
+
+2013-07-29 mvogt
+
+        * Merge pull request #37 from matthewvogt/status-field (df13aee)
+
+2013-07-30 Matt Vogt
+
+        * [qtcontacts-sqlite] Store address filtering metadata in the
+          Contacts table (fc28a65)
+        * [qtcontacts-sqlite] Allow tables to be extended without disruption
+          (6907cd3)
+
+2013-07-29 chriadam
+
+        * Merge pull request #36 from chriadam/createcontactperf (ffe79f1)
+
+2013-07-30 Chris Adams
+
+        * [qtcontacts-sqlite] Use lightweight aggregation relationship
+          codepath (9d02cbc)
+
+2013-07-29 Robin Burchell
+
+        * Merge pull request #35 from rburchell/master (28f7d5d)
+
+2013-07-28 Robin Burchell
+
+        * [qtcontacts-sqlite] Enable symbol hiding. (ae3cefa)
+
+2013-07-18 mvogt
+
+        * Merge pull request #34 from matthewvogt/index-fix (6166207)
+
+2013-07-19 Matt Vogt
+
+        * [qtcontacts-sqlite] Use separate indexes for independent properties
+          (ee7de25)
+
+2013-07-16 chriadam
+
+        * Merge pull request #33 from chriadam/birthday (b3ac8d2)
+
+2013-07-17 Chris Adams
+
+        * [qtcontacts-sqlite] Fix birthday duplicate handling (1125e69)
+
+2013-07-15 mvogt
+
+        * Merge pull request #32 from matthewvogt/extensions (213b8c0)
+
+2013-07-16 Matt Vogt
+
+        * [qtcontacts-sqlite] Select contacts variant automatically in
+          extensions (9ecd762)
+        * [qtcontacts-sqlite] Provide extensions package (812a957)
+
+2013-07-14 mvogt
+
+        * Merge pull request #30 from matthewvogt/privilege-db (6290aa5)
+        * Merge pull request #31 from matthewvogt/signal-fix (4d8f56d)
+
+2013-07-15 Matt Vogt
+
+        * [qtcontacts-sqlite] Fix test failure (452b169)
+        * [qtcontacts-sqlite] Prefer the privileged database if accessible
+          (2e1c689)
+
+2013-07-11 mvogt
+
+        * Merge pull request #29 from matthewvogt/qt4-fix (ff4b286)
+
+2013-07-12 Matt Vogt
+
+        * [qtcontacts-sqlite] Fix qt4 breakage (2691884)
+
+2013-07-11 mvogt
+
+        * Merge pull request #28 from matthewvogt/delta-fix (e6352b9)
+
+2013-07-12 Matt Vogt
+
+        * [qtcontacts-sqlite] Workaround invalid comparison of details
+          (184e565)
+
+2013-07-09 mvogt
+
+        * Merge pull request #27 from matthewvogt/was-local (a84656f)
+
+2013-07-09 Matt Vogt
+
+        * [qtcontacts-sqlite] Regenerate aggregates on relationship changes
+          (d0f427b)
+
+2013-07-08 mvogt
+
+        * Merge pull request #26 from matthewvogt/link-fix (7c1c8ac)
+
+2013-07-09 Matt Vogt
+
+        * [qtcontacts-sqlite] Fix linkage error (a174c72)
+
+2013-07-03 mvogt
+
+        * Merge pull request #24 from matthewvogt/subtypes (d9708f6)
+
+2013-07-04 Matt Vogt
+
+        * [qtcontacts-sqlite] Convert filter data when required (1031bcc)
+        * [qtcontacts-sqlite] Create shared implementation of conversion
+          functions (da1d425)
+        * [qtcontacts-sqlite] Add conversion for OnlineAccount's protocol
+          field (1faded3)
+        * [qtcontacts-sqlite] Add conversion for other subType fields
+          (4db23e9)
+        * [qtcontacts-sqlite] Add missing include (9a7d554)
+
+2013-07-03 mvogt
+
+        * Merge pull request #25 from matthewvogt/debug (fc4a048)
+
+2013-07-04 Matt Vogt
+
+        * [qtcontacts-sqlite] Provide hook to debug SQL expansion of filters
+          (ad5cacf)
+
+2013-07-02 mvogt
+
+        * Merge pull request #23 from matthewvogt/minimize (0ecf281)
+
+2013-07-03 Matt Vogt
+
+        * [qtcontacts-sqlite] Minimize reported changes (de7822b)
+
+2013-07-02 mvogt
+
+        * Merge pull request #22 from matthewvogt/subtypes (fcc6d5a)
+
+2013-07-02 Matt Vogt
+
+        * [qtcontacts-sqlite] Add context values for 'Large' and 'Default'
+          (05f7178)
+        * [qtcontacts-sqlite] Convert sub-types back to defined values on
+          read (361e688)
+
+2013-07-01 mvogt
+
+        * Merge pull request #21 from matthewvogt/regen-composite (9c92e53)
+
+2013-07-02 Matt Vogt
+
+        * [qtcontacts-sqlite] Regenerate derived properties on write
+          (74ef496)
+        * [qtcontacts-sqlite] Use the configured contact manager in testsing
+          (0ad69f4)
+
+2013-06-30 mvogt
+
+        * Merge pull request #20 from matthewvogt/emission-order (51bfabc)
+
+2013-07-01 Matt Vogt
+
+        * [qtcontacts-sqlite] Ensure no extra aggregate is created for self
+          contact (af35efa)
+        * [qtcontacts-sqlite] Correct the order of queued signal emissions
+          (7f6f1ff)
+
+2013-06-25 mvogt
+
+        * Merge pull request #19 from matthewvogt/cleanups (dda6db2)
+
+2013-06-25 Matt Vogt
+
+        * [qtcontacts-sqlite] Exclude relationships for internal queries
+          (4da7124)
+        * [qtcontacts-sqlite] Fix some terminology usage (0f2733c)
+        * [qtcontacts-sqlite] Fix variant comparison for Qt5 (6a355d5)
+
+2013-06-24 mvogt
+
+        * Merge pull request #18 from matthewvogt/rel-changes (a927988)
+
+2013-06-25 Matt Vogt
+
+        * [qtcontacts-sqlite] Respond to relationship changes (8c6bc88)
+        * Revert "[qtcontacts-sqlite] Remove check for IsNot relationships"
+          (1f0f12b)
+        * [qtcontacts-sqlite] Fix debug message (c9ff5cd)
+
+2013-06-12 John Brooks
+
+        * Merge pull request #17 from special/master (4d6625a)
+
+2013-06-11 John Brooks
+
+        * [qtcontacts-sqlite] Add missing dependency on
+          qt5-plugin-sqldriver-sqlite (76e4b00)
+
+2013-06-09 martinjones
+
+        * Merge pull request #16 from martinjones/master (4c5b66f)
+
+2013-06-10 Martin Jones
+
+        * [qtcontacts-sqlite] Fix Qt5 dependencies. (083f774)
+
+2013-06-06 chriadam
+
+        * Merge pull request #15 from matthewvogt/custom-label (f2febbe)
+
+2013-06-07 Matt Vogt
+
+        * [qtcontacts-sqlite] Support QContactName::customLabel with qtpim
+          (d28bd7a)
+        * [qtcontacts-sqlite] Fix plugin generation for qt5 (4481aa1)
+
+2013-06-05 chriadam
+
+        * Merge pull request #14 from matthewvogt/id-format (9f25fe4)
+
+2013-06-06 Matt Vogt
+
+        * [qtcontacts-sqlite] Handle ID conversion correctly (20cf71e)
+
+2013-06-03 chriadam
+
+        * Merge pull request #13 from matthewvogt/qt5-port (d85a289)
+
+2013-06-04 Matt Vogt
+
+        * [qtcontacts-sqlite] Remove irrelevant test code (9d78402)
+
+2013-05-28 Matt Vogt
+
+        * [qtcontacts-sqlite] Build with either qt4 or qt5 (98948e8)
+
+2013-05-26 John Brooks
+
+        * Merge pull request #11 from special/master (14055ed)
+        * [qtcontacts-sqlite] Fix use of a deleted iterator value (7cc3d72)
+
+2013-05-25 John Brooks
+
+        * Merge pull request #10 from special/master (437bdb8)
+        * [contacts-sqlite] Replace JobList with QList for safer logic
+          (b79e813)
+        * Merge pull request #9 from special/master (80f793e)
+        * [qtcontacts-sqlite] Obsolete qtcontacts-tracker and cubi packages
+          (0d30621)
+
+2013-05-21 chriadam
+
+        * Merge pull request #8 from matthewvogt/index-metadata (44033bd)
+
+2013-05-22 Matt Vogt
+
+        * [qtcontacts-sqlite] Index the TpMetadata table (e73e1a3)
+
+2013-05-21 Chris Adams
+
+        * [qtcontacts-sqlite] Bump version (0f45d44)
+
+2013-05-20 chriadam
+
+        * Merge pull request #7 from matthewvogt/sql-matching (8472cd6)
+
+2013-05-21 Matt Vogt
+
+        * [qtcontacts-sqlite] Build without aggregation switch (819342a)
+        * [qtcontacts-sqlite] Remove check for IsNot relationships (50d0d5c)
+        * [qtcontacts-sqlite] Tune contact matching algorithm (b4b3648)
+        * [qtcontacts-sqlite] Fix case sensitivity to match documentation
+          (8ea3533)
+
+2013-05-20 chriadam
+
+        * Merge pull request #6 from matthewvogt/ipc-locks (63b1a83)
+
+2013-05-20 Matt Vogt
+
+        * [qtcontacts-sqlite] Use dedicated columns for lowered versions of
+          text values (a899bf7)
+        * [qtcontacts-sqlite] Index on fields used in searches (21b1ab4)
+
+2013-05-17 Matt Vogt
+
+        * [qtcontacts-sqlite] Match to existing aggregate in SQL (d6db5c5)
+
+2013-05-16 Matt Vogt
+
+        * [qtcontacts-sqlite] Use a semaphore for process mutex on writes
+          (b2bb013)
+
+2013-05-09 chriadam
+
+        * Merge pull request #5 from chriadam/master (91522ee)
+
+2013-05-09 Chris Adams
+
+        * [qtcontacts-sqlite] Properly enforce uniqueness constraints
+          (d96bcaa)
+
+2013-05-08 chriadam
+
+        * Merge pull request #4 from matthewvogt/read-perf (6f88adb)
+
+2013-05-09 Matt Vogt
+
+        * [qtcontacts-sqlite] Implement basic fetch optimization hints
+          (52d66ca)
+        * [qtcontacts-sqlite] Read relationships in synchronized query
+          (f8d7150)
+        * [qtcontacts-sqlite] Traverse tables in contacts sequence (564e430)
+
+2013-05-07 chriadam
+
+        * Merge pull request #3 from matthewvogt/txn-fix (8a7c544)
+
+2013-05-08 Matt Vogt
+
+        * [qtcontacts-sqlite] Fix signal propagation (73d4e4b)
+        * [qtcontacts-sqlite] Ensure notifications are emitted after commit
+          (294f48e)
+
+2013-05-07 Matt Vogt
+
+        * [qtcontacts-sqlite] Return self contact if explicitly requested by
+          ID (30e2483)
+
+2013-05-06 chriadam
+
+        * Merge pull request #1 from matthewvogt/query-finish (632e487)
+
+2013-05-07 Matt Vogt
+
+        * [qtcontacts-sqlite] Explicitly finish queries in non-automatic
+          storage (306a66b)
+
+2013-05-03 Chris Adams
+
+        * [qtcontacts-sqlite] Fix automatic local contact generation
+          (7b9dca1)
+        * [qtcontacts-sqlite] Synthesize display labels correctly (8fcc9aa)
+        * [qtcontacts-sqlite] Improve detail aggregation semantics (b1e5fa9)
+
+2013-05-01 Chris Adams
+
+        * [qtcontacts-sqlite] Improve phone number matching (7256a5d)
+
+2013-04-30 Chris Adams
+
+        * [qtcontacts-sqlite] Various improvements (cf9dd25)
+
+2013-04-24 Chris Adams
+
+        * [qtcontacts-sqlite] Regenerate aggregate on contact update
+          (4e10090)
+
+2013-04-23 Chris Adams
+
+        * [qtcontacts-sqlite] Ensure detailUri uniqueness during aggregation
+          (0d5833f)
+
+2013-04-16 Chris Adams
+
+        * [qtcontacts-sqlite] Perform contact aggregation on save (c607e24)
+
+2013-04-15 Chris Adams
+
+        * [qtcontacts-sqlite] Improve filtering/sorting support (0e77a69)
+
+2013-04-11 Chris Adams
+
+        * [qtcontacts-sqlite] Improve support for relationships and batching
+          (50d853a)
+
+2013-04-10 Chris Adams
+
+        * [qtcontacts-sqlite] Initial commit (4497d8f)
